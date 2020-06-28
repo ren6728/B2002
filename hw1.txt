@@ -1,0 +1,384 @@
+Last login: Sat Jun 27 11:46:27 on console
+renxings-MacBook-Pro:~ renxing$ chmod 400 c2002.pem
+renxings-MacBook-Pro:~ renxing$ ssh -i "c2002.pem" ec2-user@ec2-3-22-209-223.us-east-2.compute.amazonaws.com
+The authenticity of host 'ec2-3-22-209-223.us-east-2.compute.amazonaws.com (3.22.209.223)' can't be established.
+ECDSA key fingerprint is SHA256:+PA0XG+p55CJqHvz20hKTMbRPZJBTjl+NkiJTVZ/9hw.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-3-22-209-223.us-east-2.compute.amazonaws.com,3.22.209.223' (ECDSA) to the list of known hosts.
+Last login: Sat Jun 27 03:42:49 2020 from ool-457fb417.dyn.optonline.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+4 package(s) needed for security, out of 10 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-31-115 ~]$ ls
+[ec2-user@ip-172-31-31-115 ~]$  ls -al
+total 16
+drwx------ 3 ec2-user ec2-user  95 Jun 27 04:56 .
+drwxr-xr-x 3 root     root      22 Jun 27 03:00 ..
+-rw------- 1 ec2-user ec2-user  65 Jun 27 04:56 .bash_history
+-rw-r--r-- 1 ec2-user ec2-user  18 Jan 16 00:56 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jan 16 00:56 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jan 16 00:56 .bashrc
+drwx------ 2 ec2-user ec2-user  29 Jun 27 03:00 .ssh
+[ec2-user@ip-172-31-31-115 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-31-115 ~]$ mkdir test1.txt
+[ec2-user@ip-172-31-31-115 ~]$ ls
+test1.txt
+[ec2-user@ip-172-31-31-115 ~]$ cd test1.txt
+[ec2-user@ip-172-31-31-115 test1.txt]$ rm -r test1.txt
+rm: cannot remove ‘test1.txt’: No such file or directory
+[ec2-user@ip-172-31-31-115 test1.txt]$ cd ..
+[ec2-user@ip-172-31-31-115 ~]$ rm -r test1.txt
+[ec2-user@ip-172-31-31-115 ~]$ ls
+[ec2-user@ip-172-31-31-115 ~]$ mkdir project1
+[ec2-user@ip-172-31-31-115 ~]$ ls
+project1
+[ec2-user@ip-172-31-31-115 ~]$ cd project1
+[ec2-user@ip-172-31-31-115 project1]$ ps
+  PID TTY          TIME CMD
+ 3395 pts/0    00:00:00 bash
+ 3430 pts/0    00:00:00 ps
+[ec2-user@ip-172-31-31-115 project1]$ top
+
+top - 01:12:44 up 12 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  83 total,   1 running,  46 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.3 us,  0.0 sy,  0.0 ni, 99.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1006948 total,   791232 free,    59576 used,   156140 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   810252 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND     
+    1 root      20   0   43548   5232   3908 S  0.0  0.5   0:01.14 systemd     
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kthreadd    
+    3 root      20   0       0      0      0 I  0.0  0.0   0:00.04 kworker/0:0 
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    6 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 mm_percpu_wq
+    7 root      20   0       0      0      0 S  0.0  0.0   0:00.03 ksoftirqd/0 
+    8 root      20   0       0      0      0 I  0.0  0.0   0:00.10 rcu_sched   
+    9 root      20   0       0      0      0 I  0.0  0.0   0:00.00 rcu_bh      
+   10 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0 
+   11 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 watchdog/0  
+   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 cpuhp/0     
+   14 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs   
+   15 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 netns       
+   16 root      20   0       0      0      0 I  0.0  0.0   0:00.03 kworker/u30+
+   21 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenbus      
+   22 root      20   0       0      0      0 S  0.0  0.0   0:00.00 xenwatch    
+  172 root      20   0       0      0      0 S  0.0  0.0   0:00.00 khungtaskd  
+[ec2-user@ip-172-31-31-115 project1]$ cal
+      June 2020     
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6 
+ 7  8  9 10 11 12 13 
+14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 
+28 29 30             
+                     
+[ec2-user@ip-172-31-31-115 project1]$ date
+Sun Jun 28 01:37:33 UTC 2020
+[ec2-user@ip-172-31-31-115 project1]$ uptime
+ 01:37:51 up 37 min,  1 user,  load average: 0.00, 0.00, 0.00
+[ec2-user@ip-172-31-31-115 project1]$ w
+ 01:38:00 up 37 min,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ec2-user pts/0    ool-457fb417.dyn 01:01    0.00s  0.02s  0.00s w
+[ec2-user@ip-172-31-31-115 project1]$ whoami
+ec2-user
+[ec2-user@ip-172-31-31-115 project1]$ finger usesr
+-bash: finger: command not found
+[ec2-user@ip-172-31-31-115 project1]$ finger user
+-bash: finger: command not found
+[ec2-user@ip-172-31-31-115 project1]$ uname -a
+Linux ip-172-31-31-115.us-east-2.compute.internal 4.14.177-139.254.amzn2.x86_64 #1 SMP Thu May 7 18:48:23 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+[ec2-user@ip-172-31-31-115 project1]$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+stepping	: 2
+microcode	: 0x43
+cpu MHz		: 2400.047
+cache size	: 30720 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 4800.03
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+[ec2-user@ip-172-31-31-115 project1]$ cat /proc/meminfo
+MemTotal:        1006948 kB
+MemFree:          791608 kB
+MemAvailable:     810972 kB
+Buffers:            2088 kB
+Cached:           136120 kB
+SwapCached:            0 kB
+Active:           104492 kB
+Inactive:          55668 kB
+Active(anon):      22080 kB
+Inactive(anon):      272 kB
+Active(file):      82412 kB
+Inactive(file):    55396 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         21992 kB
+Mapped:            37496 kB
+Shmem:               400 kB
+Slab:              31236 kB
+SReclaimable:      18304 kB
+SUnreclaim:        12932 kB
+KernelStack:        1788 kB
+PageTables:         3684 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      503472 kB
+Committed_AS:     179208 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       71680 kB
+DirectMap2M:      976896 kB
+[ec2-user@ip-172-31-31-115 project1]$ man command
+[ec2-user@ip-172-31-31-115 project1]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          485348       0    485348   0% /dev
+tmpfs             503472       0    503472   0% /dev/shm
+tmpfs             503472     400    503072   1% /run
+tmpfs             503472       0    503472   0% /sys/fs/cgroup
+/dev/xvda1       8376300 1327160   7049140  16% /
+tmpfs             100696       0    100696   0% /run/user/1000
+[ec2-user@ip-172-31-31-115 project1]$ du
+0	.
+[ec2-user@ip-172-31-31-115 project1]$ free
+              total        used        free      shared  buff/cache   available
+Mem:        1006948       59664      787936         400      159348      810052
+Swap:             0           0           0
+[ec2-user@ip-172-31-31-115 project1]$ whereis app
+app:
+[ec2-user@ip-172-31-31-115 project1]$ which app
+/usr/bin/which: no app in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin)
+[ec2-user@ip-172-31-31-115 project1]$ ping host
+ping: host: Name or service not known
+[ec2-user@ip-172-31-31-115 project1]$ whois domain
+-bash: whois: command not found
+[ec2-user@ip-172-31-31-115 project1]$ dig domain
+
+; <<>> DiG 9.11.4-P2-RedHat-9.11.4-9.P2.amzn2.0.3 <<>> domain
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 917
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;domain.				IN	A
+
+;; AUTHORITY SECTION:
+.			300	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 2020062701 1800 900 604800 86400
+
+;; Query time: 40 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2)
+;; WHEN: Sun Jun 28 01:42:58 UTC 2020
+;; MSG SIZE  rcvd: 110
+
+[ec2-user@ip-172-31-31-115 project1]$ dig -x host
+
+; <<>> DiG 9.11.4-P2-RedHat-9.11.4-9.P2.amzn2.0.3 <<>> -x host
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 51284
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;host.in-addr.arpa.		IN	PTR
+
+;; AUTHORITY SECTION:
+in-addr.arpa.		300	IN	SOA	b.in-addr-servers.arpa. nstld.iana.org. 2020060961 1800 900 604800 3600
+
+;; Query time: 15 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2)
+;; WHEN: Sun Jun 28 01:43:16 UTC 2020
+;; MSG SIZE  rcvd: 114
+
+[ec2-user@ip-172-31-31-115 project1]$ wget file
+--2020-06-28 01:43:28--  http://file/
+Resolving file (file)... failed: Name or service not known.
+wget: unable to resolve host address ‘file’
+[ec2-user@ip-172-31-31-115 project1]$ wget -c file
+--2020-06-28 01:43:50--  http://file/
+Resolving file (file)... failed: Name or service not known.
+wget: unable to resolve host address ‘file’
+[ec2-user@ip-172-31-31-115 project1]$ ./configure
+-bash: ./configure: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ make
+make: *** No targets specified and no makefile found.  Stop.
+[ec2-user@ip-172-31-31-115 project1]$ make install
+make: *** No rule to make target `install'.  Stop.
+[ec2-user@ip-172-31-31-115 project1]$ dpkg -i pkg.deb
+-bash: dpkg: command not found
+[ec2-user@ip-172-31-31-115 project1]$ rpm -Uvh pkg.rpm
+error: open of pkg.rpm failed: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ ^C
+[ec2-user@ip-172-31-31-115 project1]$ logout
+Connection to ec2-3-22-209-223.us-east-2.compute.amazonaws.com closed.
+renxings-MacBook-Pro:~ renxing$ !!
+ssh -i "c2002.pem" ec2-user@ec2-3-22-209-223.us-east-2.compute.amazonaws.com
+Last login: Sun Jun 28 01:01:22 2020 from ool-457fb417.dyn.optonline.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+4 package(s) needed for security, out of 10 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-31-115 ~]$ sudo yum update
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 3.7 kB     00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-linux-extras.noarch 0:1.6.10-1.amzn2 will be updated
+---> Package amazon-linux-extras.noarch 0:1.6.11-1.amzn2 will be an update
+---> Package amazon-linux-extras-yum-plugin.noarch 0:1.6.10-1.amzn2 will be updated
+---> Package amazon-linux-extras-yum-plugin.noarch 0:1.6.11-1.amzn2 will be an update
+---> Package ca-certificates.noarch 0:2019.2.32-76.amzn2.0.1 will be updated
+---> Package ca-certificates.noarch 0:2019.2.32-76.amzn2.0.2 will be an update
+---> Package cloud-init.noarch 0:19.3-2.amzn2 will be updated
+---> Package cloud-init.noarch 0:19.3-3.amzn2 will be an update
+---> Package kernel.x86_64 0:4.14.181-140.257.amzn2 will be installed
+---> Package python.x86_64 0:2.7.16-5.amzn2 will be updated
+---> Package python.x86_64 0:2.7.18-1.amzn2 will be an update
+---> Package python-devel.x86_64 0:2.7.16-5.amzn2 will be updated
+---> Package python-devel.x86_64 0:2.7.18-1.amzn2 will be an update
+---> Package python-libs.x86_64 0:2.7.16-5.amzn2 will be updated
+---> Package python-libs.x86_64 0:2.7.18-1.amzn2 will be an update
+---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6.1 will be updated
+---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6.2 will be an update
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.1 will be updated
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.2 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                        Arch   Version                 Repository  Size
+================================================================================
+Installing:
+ kernel                         x86_64 4.14.181-140.257.amzn2  amzn2-core  20 M
+Updating:
+ amazon-linux-extras            noarch 1.6.11-1.amzn2          amzn2-core  36 k
+ amazon-linux-extras-yum-plugin noarch 1.6.11-1.amzn2          amzn2-core  10 k
+ ca-certificates                noarch 2019.2.32-76.amzn2.0.2  amzn2-core 397 k
+ cloud-init                     noarch 19.3-3.amzn2            amzn2-core 923 k
+ python                         x86_64 2.7.18-1.amzn2          amzn2-core  92 k
+ python-devel                   x86_64 2.7.18-1.amzn2          amzn2-core 403 k
+ python-libs                    x86_64 2.7.18-1.amzn2          amzn2-core 7.5 M
+ selinux-policy                 noarch 3.13.1-192.amzn2.6.2    amzn2-core 453 k
+ selinux-policy-targeted        noarch 3.13.1-192.amzn2.6.2    amzn2-core 6.6 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+Upgrade  9 Packages
+
+Total download size: 37 M
+Is this ok [y/d/N]: exit
+Is this ok [y/d/N]: Exiting on user command
+Your transaction was saved, rerun it with:
+ yum load-transaction /tmp/yum_save_tx.2020-06-28.01-46.aB3Nz8.yumtx
+[ec2-user@ip-172-31-31-115 ~]$ cd project1
+[ec2-user@ip-172-31-31-115 project1]$ ls
+[ec2-user@ip-172-31-31-115 project1]$ touch file1
+[ec2-user@ip-172-31-31-115 project1]$ ls
+file1
+[ec2-user@ip-172-31-31-115 project1]$ cp file1 file2
+[ec2-user@ip-172-31-31-115 project1]$ ls
+file1  file2
+[ec2-user@ip-172-31-31-115 project1]$ cp -r project1 project2
+cp: cannot stat ‘project1’: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ mv file1 file2
+[ec2-user@ip-172-31-31-115 project1]$ ls
+file2
+[ec2-user@ip-172-31-31-115 project1]$ ssh user@host
+ssh: Could not resolve hostname host: Name or service not known
+[ec2-user@ip-172-31-31-115 project1]$ ssh user@ec2-user
+ssh: Could not resolve hostname ec2-user: Name or service not known
+[ec2-user@ip-172-31-31-115 project1]$ grep pattern files
+grep: files: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ grep pattern file2
+[ec2-user@ip-172-31-31-115 project1]$ grep -r pattern project1
+grep: project1: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ command | grep pattern
+[ec2-user@ip-172-31-31-115 project1]$ locate file2
+[ec2-user@ip-172-31-31-115 project1]$ chmod octal file2
+chmod: invalid mode: ‘octal’
+Try 'chmod --help' for more information.
+[ec2-user@ip-172-31-31-115 project1]$ chmod 777
+chmod: missing operand after ‘777’
+Try 'chmod --help' for more information.
+[ec2-user@ip-172-31-31-115 project1]$ chmod 755
+chmod: missing operand after ‘755’
+Try 'chmod --help' for more information.
+[ec2-user@ip-172-31-31-115 project1]$ fg
+-bash: fg: current: no such job
+[ec2-user@ip-172-31-31-115 project1]$ bg
+-bash: bg: current: no such job
+[ec2-user@ip-172-31-31-115 project1]$ kill pid
+-bash: kill: pid: arguments must be process or job IDs
+[ec2-user@ip-172-31-31-115 project1]$ ps
+  PID TTY          TIME CMD
+ 3609 pts/0    00:00:00 bash
+ 3706 pts/0    00:00:00 ps
+[ec2-user@ip-172-31-31-115 project1]$ tree
+-bash: tree: command not found
+[ec2-user@ip-172-31-31-115 project1]$ tree/
+-bash: tree/: No such file or directory
+[ec2-user@ip-172-31-31-115 project1]$ # yum install tree
+[ec2-user@ip-172-31-31-115 project1]$ tree -a ./GFG
+-bash: tree: command not found
+[ec2-user@ip-172-31-31-115 project1]$ brew install tree
+-bash: brew: command not found
+[ec2-user@ip-172-31-31-115 project1]$ cd ..
+[ec2-user@ip-172-31-31-115 ~]$ brew install tree
+-bash: brew: command not found
+[ec2-user@ip-172-31-31-115 ~]$ ~
+-bash: /home/ec2-user: Is a directory
+[ec2-user@ip-172-31-31-115 ~]$ /home/ubuntu
+-bash: /home/ubuntu: No such file or directory
+[ec2-user@ip-172-31-31-115 ~]$ | /
+-bash: syntax error near unexpected token `|'
+[ec2-user@ip-172-31-31-115 ~]$ 
+
