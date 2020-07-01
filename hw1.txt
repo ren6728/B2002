@@ -1,3 +1,5 @@
+hell0
+
 Last login: Sat Jun 27 11:46:27 on console
 renxings-MacBook-Pro:~ renxing$ chmod 400 c2002.pem
 renxings-MacBook-Pro:~ renxing$ ssh -i "c2002.pem" ec2-user@ec2-3-22-209-223.us-east-2.compute.amazonaws.com
