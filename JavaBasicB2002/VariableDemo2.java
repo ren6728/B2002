@@ -8,6 +8,7 @@ public class VariableDemo2{
 
         char MyLetter ='D', a=65,b=66,c=67;
         System.out.println(MyLetter + a + b + c);
+        System.out.println(MyLetter);
 
         boolean myBool= true;
         String myText="Hello!";
