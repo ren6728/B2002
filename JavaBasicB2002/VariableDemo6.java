@@ -29,7 +29,7 @@ public class VariableDemo6{
         System.out.println(myNumber[i][j]);
       }
     }
-   
+   System.out.println("**********************");
    
    }
 }
