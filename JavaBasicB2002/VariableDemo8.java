@@ -70,6 +70,7 @@ switch (day2) {
     System.out.println("Looking forward to the Weekend");
 }
 System.out.println("**********break7************"); 
+   // above is switch
    
    }
    
