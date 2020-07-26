@@ -18,8 +18,5 @@ public static void main(String[] args){
    char kiranGrade ='F';
    System.out.println(nameOfLatePerson + "is : " + kiranGrade);
    System.out.println("**********break2************");
-
-
 }
-
 }
