@@ -1,5 +1,5 @@
 public class VariableDemo11{
-    public static void multiply(){
+public static void multiply(){
         int a,b,result;
         a=10;
         b=12;
