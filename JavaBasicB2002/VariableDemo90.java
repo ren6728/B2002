@@ -12,8 +12,7 @@ public class VariableDemo90 {
     System.out.println(fname + " is " + age);
     System.out.println("---------------------!");
   }
-
-  public static void main(String[] args) {
+public static void main(String[] args) {
     myMethod();
     myMethod();
     myMethod();
